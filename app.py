@@ -33,7 +33,6 @@ async def webhook_whatsapp(request: Request):
         print(f"Error al generar contenido: {e}")
         respuesta.message("Lo siento, hubo un problema al procesar tu mensaje.")
 
-    
     print(f"Respuesta enviada: {str(respuesta)}")
 
     return Response(content=str(respuesta), media_type="application/xml")
